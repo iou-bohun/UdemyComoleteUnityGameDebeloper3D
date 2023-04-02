@@ -5,12 +5,20 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
+    // PARAMETERS
     [SerializeField] private float speed = 100;
     [SerializeField] private float rotationSpeed = 100;
+    [SerializeField] AudioClip mainEngine;
 
-    bool audioIsPlaying;
+
+    [SerializeField] ParticleSystem rightEngineParticle;
+    [SerializeField] ParticleSystem leftEngineParticle;
+    [SerializeField] ParticleSystem mainEngineParticle;
+    // CACHE
     AudioSource audio;
     Rigidbody rigid;
+    //STATE
+    
     private void Start()
     {
         audio = GetComponent<AudioSource>();
@@ -26,29 +34,73 @@ public class Movement : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.A))
         {
-            Rotation(rotationSpeed);
+            RotateLeft();
         }
         else if (Input.GetKey(KeyCode.D))
         {
-            Rotation(-rotationSpeed);
+            RotateRight();
         }
+        else
+        {
+            StopRotating();
+        }
+    }
+
+    private void RotateRight()
+    {
+        Rotation(-rotationSpeed);
+        if (!leftEngineParticle.isPlaying)
+        {
+            leftEngineParticle.Play();
+        }
+    }
+    
+    private void RotateLeft()
+    {
+        Rotation(rotationSpeed);
+        if (!rightEngineParticle.isPlaying)
+        {
+            rightEngineParticle.Play();
+        }
+    }
+
+    private void StopRotating()
+    {
+        rightEngineParticle.Stop();
+        leftEngineParticle.Stop();
     }
 
     private void ProcessThrust()
     {
         if (Input.GetKey(KeyCode.Space))
         {
-            //AddRelativeForce = 물체 기준으로 물리 적용 월드 기준이 아니라 
-            rigid.AddRelativeForce(Vector3.up * speed *Time.deltaTime);
-            if (!audio.isPlaying)
-            {
-                audio.Play();
-            }
+            StartThrusting();
         }
         else
         {
-            audio.Pause(); 
+            StopThrusting();
         }
+    }
+
+    private void StartThrusting()
+    {
+
+        //AddRelativeForce = 물체 기준으로 물리 적용 월드 기준이 아니라 
+        rigid.AddRelativeForce(Vector3.up * speed * Time.deltaTime);
+        if (!audio.isPlaying)
+        {
+            audio.PlayOneShot(mainEngine);
+        }
+        if (!mainEngineParticle.isPlaying)
+        {
+            mainEngineParticle.Play();
+        }
+    }
+
+    private void StopThrusting()
+    {
+        audio.Pause();
+        mainEngineParticle.Stop();
     }
 
     private void Rotation(float rotationThisFrame)
