@@ -1,6 +1,6 @@
 # UdemyComoleteUnityGameDebeloper3D  
 # Obstacle Course
-###첫번째 강좌
+### 첫번째 강좌
 
 플레이어는 상하좌우의 이동을 할 수 있다.  
 맵에 존재하는 물체와 충 돌 시 충돌 카운트가 증가한다.
