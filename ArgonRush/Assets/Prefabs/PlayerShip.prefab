@@ -1049,6 +1049,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8918d48492eff54b85cac4f089ec6f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 10
+  xRange: 10
+  yRange: 7
+  positionPitchFactor: 2
+  controlPitchFactor: 10
+  positionYawFactor: 2
+  controlRollFactor: 10
 --- !u!1 &9133596342690616150
 GameObject:
   m_ObjectHideFlags: 0
