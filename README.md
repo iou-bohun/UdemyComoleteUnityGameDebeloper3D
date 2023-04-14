@@ -1,5 +1,4 @@
-# UdemyComoleteUnityGameDebeloper3D
-유데미 강의 
+# UdemyComoleteUnityGameDebeloper3D  
 # Obstacle Course
 
 플레이어는 상하좌우의 이동을 할 수 있다.  
