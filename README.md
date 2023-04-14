@@ -2,7 +2,7 @@
 유데미 강의 
 # Obstacle Course
 
-플레이어는 상하좌우의 이동을 할 수 있다.
+플레이어는 상하좌우의 이동을 할 수 있다.  
 맵에 존재하는 물체와 충 돌 시 충돌 카운트가 증가한다.
 
 ![image](https://user-images.githubusercontent.com/56661597/232085887-e4c5f1bd-7b75-410f-bdf8-b62ee4fafce5.png)
