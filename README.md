@@ -26,7 +26,7 @@
 오디오  
 파티클  
 ![image](https://user-images.githubusercontent.com/56661597/232089583-3ca584bd-cfe9-48ae-af40-739ce6eda8cc.png)
-![image](https://user-images.githubusercontent.com/56661597/232089707-6b0a84af-e07e-4ce9-b6f3-4599ab703514.png)
+![image](https://user-images.githubusercontent.com/56661597/232089707-6b0a84af-e07e-4ce9-b6f3-4599ab703514.png)  
 
       
 
