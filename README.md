@@ -23,6 +23,7 @@
 #### 이슈
 플레이어는 맵에 존재하는 장애물과 충돌 시 파괴된다. 
 #### 새로배운 내용 
+씬 조작  
 오디오  *AudioSource*  
 파티클  *ParticleSystem*
 ![image](https://user-images.githubusercontent.com/56661597/232089583-3ca584bd-cfe9-48ae-af40-739ce6eda8cc.png)
