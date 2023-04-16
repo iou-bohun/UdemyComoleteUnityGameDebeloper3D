@@ -27,7 +27,10 @@ A / D  를 누를 시 회전을 한다
 오디오  *AudioSource*  
 파티클  *ParticleSystem*
 ![image](https://user-images.githubusercontent.com/56661597/232089583-3ca584bd-cfe9-48ae-af40-739ce6eda8cc.png)
-![image](https://user-images.githubusercontent.com/56661597/232089707-6b0a84af-e07e-4ce9-b6f3-4599ab703514.png)  
+![image](https://user-images.githubusercontent.com/56661597/232089707-6b0a84af-e07e-4ce9-b6f3-4599ab703514.png)
+![image](https://user-images.githubusercontent.com/56661597/232321482-ac3fdd0d-9544-42cb-baf0-97a01e62984e.png)
+
+
 
       
 
