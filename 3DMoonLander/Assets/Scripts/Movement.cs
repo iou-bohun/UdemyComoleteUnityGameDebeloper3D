@@ -18,7 +18,7 @@ public class Movement : MonoBehaviour
     AudioSource audio;
     Rigidbody rigid;
     //STATE
-    
+
     private void Start()
     {
         audio = GetComponent<AudioSource>();
@@ -54,7 +54,7 @@ public class Movement : MonoBehaviour
             leftEngineParticle.Play();
         }
     }
-    
+
     private void RotateLeft()
     {
         Rotation(rotationSpeed);

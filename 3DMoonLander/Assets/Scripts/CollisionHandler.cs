@@ -17,7 +17,7 @@ public class CollisionHandler : MonoBehaviour
     AudioSource audio;
     private void Start()
     {
-        audio = GetComponent<AudioSource>();     
+        audio = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -28,8 +28,8 @@ public class CollisionHandler : MonoBehaviour
 
     private void RespondToDebugKeys()
     {
-       if(Input.GetKey(KeyCode.L)) { LoadNextLevel(); }
-       else if(Input.GetKey(KeyCode.C)) 
+        if (Input.GetKey(KeyCode.L)) { LoadNextLevel(); }
+        else if (Input.GetKey(KeyCode.C))
         {
             collisiionDisable = !collisiionDisable; // toggle collision
         }
@@ -38,7 +38,7 @@ public class CollisionHandler : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         if (isTransitioning || collisiionDisable) { return; }
-        switch(collision.gameObject.tag)
+        switch (collision.gameObject.tag)
         {
             case "Start":
                 break;
@@ -57,7 +57,7 @@ public class CollisionHandler : MonoBehaviour
                 Debug.Log("You blewUP!");
                 break;
         }
-        
+
     }
 
     private void startSuccessSequence()
@@ -80,8 +80,8 @@ public class CollisionHandler : MonoBehaviour
         audio.PlayOneShot(crash);
         crashParticle.Play();
         Movement movement = GetComponent<Movement>();
-        movement.enabled= false;
-       Invoke("ReloadLevel", levelLoadDelay) ;
+        movement.enabled = false;
+        Invoke("ReloadLevel", levelLoadDelay);
     }
 
     void ReloadLevel()
@@ -94,7 +94,7 @@ public class CollisionHandler : MonoBehaviour
     void LoadNextLevel()
     {
         //다음 스테이지
-        int nextSceneIndex = SceneManager.GetActiveScene().buildIndex+1;
+        int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
         if (nextSceneIndex == SceneManager.sceneCountInBuildSettings)
         {
             nextSceneIndex = 0;
